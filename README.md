@@ -35,7 +35,7 @@
 
 
 ## 3. Criar o banco de dados RDS (MYSQL)
-![Logo da Minha Empresa](/imagens/Conectividade (escolha SG).png)
+![Logo da Minha Empresa](/imagens/Conectividade%(escolha%SG).png)
 ## 4. Criar o sistema de arquivos EFS
 ## 5. Criar o launch template
 ## 6. Criar o load balancer
