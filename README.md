@@ -47,22 +47,14 @@
   - Coloque um ID para o banco de dados
   - Coloque no modo autogerenciamento e crie suas credenciais
 - Escolha a configuração da sua instancia:
-<br>
-  <img width="1252" height="505" alt="Configurações de instancias (t3 micro)" src="https://github.com/user-attachments/assets/ea8a281c-792f-4d57-acb9-903282572978" />
-<br>
+  <img width="1252" height="505" style="margin:10px" alt="Configurações de instancias (t3 micro)" src="https://github.com/user-attachments/assets/ea8a281c-792f-4d57-acb9-903282572978" />
 - Selecione sua VPC:
-<br>
   <img width="1821" height="520" alt="Conectividade (escolha de vpc)" src="https://github.com/user-attachments/assets/5957e377-2693-453f-926f-a6370f2f7eca" />
-<br>
 - Selecione seu security groups (SG-RDS):
-<br>
   <img width="1821" height="610" alt="Conectividade (escolha SG)" src="https://github.com/user-attachments/assets/99bf7326-8970-4cb1-99f6-4f9599c1d59d" />
-<br>
 - Deixe o RDS com autenticação por senha
 - Nas configurações adicionais coloque o nome do banco de dados
-  <br>
   <img width="1765" height="423" alt="Configuração adicional (nome do banco)" src="https://github.com/user-attachments/assets/09e0d423-b432-4ab8-a3d7-1bb1793c1e80" />
-  <br>
 - Ele será usado posteriormente no user_data, o restante deixe como padrão
 
 
