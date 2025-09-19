@@ -11,7 +11,7 @@
      - Regras de entrada:
        todo o tráfego => 0.0.0.0/0
      - Regras de saída:
-       vazio
+       todo o tráfego => 0.0.0.0/0
        
    - SG da EC2:
      - Regras de entrada:
@@ -36,6 +36,8 @@
 
 ## 3. Criar o banco de dados RDS (MYSQL)
 ![Logo da Minha Empresa](/imagens/Conectividade%(escolha%SG).png)
+<img width="1821" height="520" alt="Conectividade (escolha de vpc)" src="https://github.com/user-attachments/assets/9e1619c3-ab2d-4a58-b61c-19e593e16f33" />
+
 ## 4. Criar o sistema de arquivos EFS
 ## 5. Criar o launch template
 ## 6. Criar o load balancer
