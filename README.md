@@ -39,6 +39,8 @@
 
 - Método de criação: padrão
 - Nas opções de mecanismo: MYSQL
+
+  
 <img width="1818" height="607" alt="Opções de mecanismo (escolha mysql)" src="https://github.com/user-attachments/assets/25b97ab9-50ba-4aff-8790-e1c08ec9a760" />
 
 - Modelos: gratuito
