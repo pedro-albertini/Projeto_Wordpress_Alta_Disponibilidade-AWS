@@ -45,23 +45,26 @@
 - Configurações:
   - Coloque um ID para o banco de dados
   - Coloque no modo autogerenciamento e crie suas credenciais
-  - Escolha a configuração da sua instancia:
-    <img width="1252" height="505" alt="Configurações de instancias (t3 micro)" src="https://github.com/user-attachments/assets/ea8a281c-792f-4d57-acb9-903282572978" />
-  - Selecione sua VPC:
-    <img width="1821" height="520" alt="Conectividade (escolha de vpc)" src="https://github.com/user-attachments/assets/5957e377-2693-453f-926f-a6370f2f7eca" />
-  - Selecione seu security groups (SG-RDS):
-    <img width="1821" height="610" alt="Conectividade (escolha SG)" src="https://github.com/user-attachments/assets/99bf7326-8970-4cb1-99f6-4f9599c1d59d" />
-  - Deixe o RDS com autenticação por senha
-  - Nas configurações adicionais coloque o nome do banco de dados
-    <img width="1765" height="423" alt="Configuração adicional (nome do banco)" src="https://github.com/user-attachments/assets/09e0d423-b432-4ab8-a3d7-1bb1793c1e80" />
-  - Ele será usado posteriormente no user_data, o restante deixe como padrão
+- Escolha a configuração da sua instancia:
+  <img width="1252" height="505" alt="Configurações de instancias (t3 micro)" src="https://github.com/user-attachments/assets/ea8a281c-792f-4d57-acb9-903282572978" />
+- Selecione sua VPC:
+  <img width="1821" height="520" alt="Conectividade (escolha de vpc)" src="https://github.com/user-attachments/assets/5957e377-2693-453f-926f-a6370f2f7eca" />
+- Selecione seu security groups (SG-RDS):
+  <img width="1821" height="610" alt="Conectividade (escolha SG)" src="https://github.com/user-attachments/assets/99bf7326-8970-4cb1-99f6-4f9599c1d59d" />
+- Deixe o RDS com autenticação por senha
+- Nas configurações adicionais coloque o nome do banco de dados
+  <img width="1765" height="423" alt="Configuração adicional (nome do banco)" src="https://github.com/user-attachments/assets/09e0d423-b432-4ab8-a3d7-1bb1793c1e80" />
+- Ele será usado posteriormente no user_data, o restante deixe como padrão
 
-
-
-
-<img width="1821" height="520" alt="Conectividade (escolha de vpc)" src="https://github.com/user-attachments/assets/9e1619c3-ab2d-4a58-b61c-19e593e16f33" />
 
 ## 4. Criar o sistema de arquivos EFS
+
+- Coloque um nome para seu EFS
+  <img width="1278" height="510" alt="Geral (nome efs)" src="https://github.com/user-attachments/assets/ecaf2a69-4bc3-481b-a9c2-fc4fc7354981" />
+- Em redes, selecione sua VPC e certifique-se que as subnets que estão selecionadas são privadas e os grupos de segurança estão como SG-EFS
+  <img width="1470" height="687" alt="Rede (vpc e subnet)" src="https://github.com/user-attachments/assets/157fe57b-52b1-4f53-b222-c4d3a5a458d0" />
+- O restante pode deixar como padrão
+
 ## 5. Criar o launch template
 ## 6. Criar o load balancer
 ## 7. Criar o auto scaling group
