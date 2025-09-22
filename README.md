@@ -93,6 +93,9 @@
 - Para criar um grupo alvo escolha as seguintes opções:
 
 <img width="1425" height="648" alt="Configuração inicial (instancia)" src="https://github.com/user-attachments/assets/cd8ca9ff-a462-47ca-8ed9-88d37a812601" />
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <img width="1212" height="687" alt="Escolha VPC" src="https://github.com/user-attachments/assets/7963ee9e-d940-4ed7-9421-ebfb0a937701" />
 
 
@@ -117,3 +120,21 @@
 
 
 ## 8. Criar o auto scaling group
+
+- Coloque um nome e escolha o launch template criado anteriormente:
+
+<img width="1416" height="522" alt="modelo de execução (nome)" src="https://github.com/user-attachments/assets/b831370e-21fd-4f5e-bd40-cce4f5af4068" />
+
+- Em rede:
+  - Escolha a sua VPC e as sub-redes públicas
+
+<img width="1400" height="678" alt="Rede (VPC)" src="https://github.com/user-attachments/assets/d5c31d21-ab07-4d77-a4a2-7622bd532f7d" />
+
+- Selecione o load balancer criado anteriormente
+- Configurações:
+  - Mínimo: 1 instância
+  - Desejado: 2 instâncias
+  - Máximo: 3 instâncias
+  - O resto deixe como padrão
+
+
