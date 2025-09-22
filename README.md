@@ -1,5 +1,33 @@
 # Projeto_Wordpress_Alta_Disponibilidade-AWS
 
+## 🔍 Funcionalidades
+
+- Ambiente escalável utilizando Auto Scaling Group
+- Persistência de arquivos com Amazon EFS
+- Banco de dados gerenciado com Amazon RDS (MySQL)
+- Balanceamento de carga com Elastic Load Balancer
+- Implantação automática via script de inicialização (User Data)
+- Segurança reforçada por meio de Security Groups bem configurados
+
+## 📁 Arquitetura e Serviços Utilizados
+
+- VPC personalizada
+- Sub-redes:
+  - 2 públicas (EC2 + Load Balancer)
+  - 2 privadas (EFS + RDS)
+- Amazon EC2
+  - Execução do Docker Compose com WordPress
+  - Utilização de Launch Template para instâncias do Auto Scaling
+- Amazon RDS (MySQL)
+  - Banco de dados gerenciado para o WordPress
+- Amazon EFS
+  - Armazenamento de arquivos persistentes e compartilhados
+- Elastic Load Balancer
+  - Distribuição de tráfego e acesso externo ao WordPress
+- Auto Scaling Group
+  - 2 instâncias em execução (com ajuste automático entre 1 e 3)
+
+## ⚙️ Configuração
 ## 1. Crie uma VPC
 
    - 2 sub-redes públicas para EC2 e o Load Balancer
