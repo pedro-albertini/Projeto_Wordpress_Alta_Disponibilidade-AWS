@@ -54,12 +54,12 @@
        MYSQL/Aurora => TCP => 3306 => SG-EC2
      - Regras de saída:
        todo o tráfego => 0.0.0.0/0
-       
-   - SG do EFS:
-     - Regras de entrada:
-       NFS => TCP => 2049 => SG-EC2
-     - Regras de saída:
-       todo o tráfego => 0.0.0.0/0
+
+- SG do EFS:
+  - Regras de entrada:
+    NFS => TCP => 2049 => SG-EC2
+  - Regras de saída:
+    todo o tráfego => 0.0.0.0/0
 
 
 
