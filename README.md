@@ -3,10 +3,10 @@
 <br>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="120"/>
-  <img src="https://skillicons.dev/icons?i=aws" alt="AWS" width="120"/>
-  <img src="https://skillicons.dev/icons?i=wordpress" alt="WordPress" width="120"/>
-  <img src="https://skillicons.dev/icons?i=linux" alt="Linux" width="120"/>
+  <img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="100"/>
+  <img src="https://skillicons.dev/icons?i=aws" alt="AWS" width="100"/>
+  <img src="https://skillicons.dev/icons?i=wordpress" alt="WordPress" width="100"/>
+  <img src="https://skillicons.dev/icons?i=linux" alt="Linux" width="100"/>
 </p>
 
 <br><br>
@@ -133,8 +133,19 @@
 
 - O restante pode deixar como padrão
 
-## 5. Criar o launch template
+## 5. Criar instância EC2 base com user data
 
+- Utilizar AMI Ubuntu
+- Adicionar script no User Data para:
+  - Instalar Docker ou containerd
+  - Montar EFS
+  - Rodar container do WordPress com variáveis de ambiente do RDS
+- User data utilizado: ![`userdata`](./userdata.sh)
+- Conecte-se via SSH e verifique se o Docker está funcionando e se nosso projeto foi lançado.
+  
+## 6. Criar o launch template
+
+- Baseado na instância feita anteriormente
 - Deve conter:
   - AMI Ubuntu
   - Par de chaves (opcional caso precise conectar via SSH)
@@ -143,7 +154,7 @@
   - Deixar IP público das instâncias ativadas
   - Script do UserData
 
-## 6. Criar o target group
+## 7. Criar o target group
 
 - Para criar um grupo alvo escolha as seguintes opções:  
 
@@ -156,7 +167,7 @@
 | *Figura - Escolha VPC* |
 
 
-## 7. Criar o load balancer
+## 8. Criar o load balancer
 
 - Tipo: application load balancer
 - Coloque um nome para seu ALB:  
@@ -184,7 +195,7 @@
 | *Figura - Roteamento (TG)* |
 
 
-## 8. Criar o auto scaling group
+## 9. Criar o auto scaling group
 
 - Coloque um nome e escolha o launch template criado anteriormente:  
 
