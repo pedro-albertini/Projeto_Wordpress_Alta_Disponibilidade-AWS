@@ -1,4 +1,15 @@
-# Projeto_Wordpress_Alta_Disponibilidade-AWS
+<h1 align="center">Projeto_Wordpress_Alta_Disponibilidade-AWS</h1>
+
+<br>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="120"/>
+  <img src="https://skillicons.dev/icons?i=aws" alt="AWS" width="120"/>
+  <img src="https://skillicons.dev/icons?i=wordpress" alt="WordPress" width="120"/>
+  <img src="https://skillicons.dev/icons?i=linux" alt="Linux" width="120"/>
+</p>
+
+<br><br>
 
 ## 🔍 Funcionalidades
 
@@ -26,6 +37,8 @@
   - Distribuição de tráfego e acesso externo ao WordPress
 - Auto Scaling Group
   - 2 instâncias em execução (com ajuste automático entre 1 e 3)
+
+<br>
 
 ## ⚙️ Configuração
 ## 1. Crie uma VPC
@@ -192,3 +205,20 @@
   - Desejado: 2 instâncias
   - Máximo: 3 instâncias
   - O resto deixe como padrão
+
+<br>
+
+## 🚀 Conclusão
+
+Este projeto demonstrou a implementação de um ambiente de **alta disponibilidade** para o WordPress utilizando os principais serviços da **AWS** (EC2, RDS, EFS, ALB e Auto Scaling Group), aliado à **containerização com Docker** para garantir portabilidade e padronização do ambiente.  
+
+A solução permite escalabilidade, persistência de dados e maior resiliência da aplicação, seguindo boas práticas de arquitetura em nuvem e segurança com o uso de Security Groups.  
+
+✅ **Principais aprendizados**:  
+- Infraestrutura como código (User Data para automação do ambiente)  
+- Uso de containers (Docker e Docker Compose) em conjunto com serviços gerenciados da AWS  
+- Criação de um ambiente altamente disponível e escalável  
+
+---
+
+🔗 Desenvolvido com foco em aprendizado e aplicação prática de **DevOps e Cloud Computing**.
