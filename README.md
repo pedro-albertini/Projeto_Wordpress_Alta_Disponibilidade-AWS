@@ -142,6 +142,9 @@
   - Rodar container do WordPress com variáveis de ambiente do RDS
 - User data utilizado: [`userdata`](./userdata.sh)
 - Conecte-se via SSH e verifique se o Docker está funcionando e se nosso projeto foi lançado.
+```
+  ssh -i suachave.pem ubuntu@ip_publico 
+```
   
 ## 6. Criar o launch template
 
