@@ -2,6 +2,12 @@
 
 <br>
 
+| ![arquitetura projeto](https://github.com/user-attachments/assets/90a58e57-e19a-4b75-a641-58b7f60dc90f) |
+|-------------------------------------------------------------------------------------------------------------------------|
+| *Figura - arquitetura projeto* |
+
+<br>
+
 <p align="center">
   <img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="100"/>
   <img src="https://skillicons.dev/icons?i=aws" alt="AWS" width="100"/>
@@ -41,7 +47,7 @@
 <br>
 
 ## ⚙️ Configuração
-## 1. Crie uma VPC
+## 1. Criar uma VPC
 
    - 2 sub-redes públicas para EC2 e o Load Balancer
    - 4 sub-redes privadas para RDS e o EFS
@@ -75,8 +81,36 @@
     todo o tráfego => 0.0.0.0/0
 
 
+## 3. Criar NAT gateway
 
-## 3. Criar o banco de dados RDS (MYSQL)
+- Criar dois NAT gateways um para cada sub-rede pública, alocando IPs elásticos
+- Sub-rede pública 1:
+  
+| <img width="1686" height="543" alt="image" src="https://github.com/user-attachments/assets/0044b494-4856-42f9-9883-3cec7a1a6a4a" /> |
+|-------------------------------------------------------------------------------------------------------------------------|
+| *Figura - Configurações do gateway NAT 1* |
+
+- Sub-rede pública 2:
+
+| <img width="1552" height="537" alt="image" src="https://github.com/user-attachments/assets/1e80b419-8259-47f7-abb4-22eee7a16a5c" /> |
+|-------------------------------------------------------------------------------------------------------------------------|
+| *Figura - Configurações do gateway NAT 2* |
+
+- Edite as rotas das sub-redes privadas 1 e 2 para as intâncias terem acesso púbilco
+- Sub-rede privada 1:
+  
+| <img width="1807" height="405" alt="image" src="https://github.com/user-attachments/assets/3eab6a87-4fed-4eb9-9905-1a8def4c71a2" /> |
+|-------------------------------------------------------------------------------------------------------------------------|
+| *Figura - Editar tabela de rotas 1* |
+
+- Sub-rede privada 2
+
+| <img width="1848" height="402" alt="image" src="https://github.com/user-attachments/assets/cac56d12-f920-45b9-a59d-6c480f9ae450" /> |
+|-------------------------------------------------------------------------------------------------------------------------|
+| *Figura - Editar tabela de rotas 2* |
+
+
+## 4. Criar o banco de dados RDS (MYSQL)
 
 - Método de criação: padrão
 - Nas opções de mecanismo: MYSQL  
@@ -117,7 +151,7 @@
 - Ele será usado posteriormente no user_data, o restante deixe como padrão
 
 
-## 4. Criar o sistema de arquivos EFS
+## 5. Criar o sistema de arquivos EFS
 
 - Coloque um nome para seu EFS:  
 
@@ -133,7 +167,7 @@
 
 - O restante pode deixar como padrão
 
-## 5. Criar instância EC2 base com user data
+## 6. Criar instância EC2 base com user data
 
 - Utilizar AMI Ubuntu
 - Adicionar script no User Data para:
@@ -146,7 +180,7 @@
   ssh -i suachave.pem ubuntu@ip_publico 
 ```
   
-## 6. Criar o launch template
+## 7. Criar o launch template
 
 - Baseado na instância feita anteriormente
 - Deve conter:
@@ -157,7 +191,7 @@
   - Deixar IP público das instâncias ativadas
   - Script do UserData
 
-## 7. Criar o target group
+## 8. Criar o target group
 
 - Para criar um grupo alvo escolha as seguintes opções:  
 
@@ -170,7 +204,7 @@
 | *Figura - Escolha VPC* |
 
 
-## 8. Criar o load balancer
+## 9. Criar o load balancer
 
 - Tipo: application load balancer
 - Coloque um nome para seu ALB:  
@@ -198,7 +232,7 @@
 | *Figura - Roteamento (TG)* |
 
 
-## 9. Criar o auto scaling group
+## 10. Criar o auto scaling group
 
 - Coloque um nome e escolha o launch template criado anteriormente:  
 
