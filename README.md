@@ -9,10 +9,10 @@
 <br>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="100"/>
-  <img src="https://skillicons.dev/icons?i=aws" alt="AWS" width="100"/>
-  <img src="https://skillicons.dev/icons?i=wordpress" alt="WordPress" width="100"/>
-  <img src="https://skillicons.dev/icons?i=linux" alt="Linux" width="100"/>
+  <img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="80"/>
+  <img src="https://skillicons.dev/icons?i=aws" alt="AWS" width="80"/>
+  <img src="https://skillicons.dev/icons?i=wordpress" alt="WordPress" width="80"/>
+  <img src="https://skillicons.dev/icons?i=linux" alt="Linux" width="80"/>
 </p>
 
 <br><br>
